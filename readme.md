@@ -1,7 +1,12 @@
 # La Palma Volcano - Central News
 If interested in helping out, reach out to me at:
-[Twitter](twitter.com/ferpl22)
-[E-mail](fern.perloz@gmail.com)
+
+[Twitter](https://twitter.com/ferpl22)
+
+
+E-mail: <fern.perloz@gmail.com>
+
+
 [Telegram Group](https://t.me/joinchat/I1J1KrPz-KBhOTBk)
 
 ## Lava Flow Tracker
