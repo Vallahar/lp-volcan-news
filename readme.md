@@ -1,5 +1,8 @@
 # La Palma Volcano - Central News
-
+If interested in helping out, reach out to me at:
+(Twitter)[twitter.com/ferpl22]
+(E-mail)[fern.perloz@gmail.com]
+(Telegram Group)[https://t.me/joinchat/I1J1KrPz-KBhOTBk]
 ## Lava Flow Tracker
 This is an initiative to build a web-app to visualise as closely as possible the evolution of the lava rivers in the current eruption of the Cumbre Vieja volcano in La Palma, Canary Islands Spain.
 
