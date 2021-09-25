@@ -17,7 +17,7 @@ class DashboardPage extends Component {
       <div>
         {/* Card stats */}
         <div
-          className="ml-4 mb-4 text-white"
+          className="ml-4 mb-4 text-black"
         >Artículos útiles</div>
         <div className="flex flex-wrap">
           <CardComponent
