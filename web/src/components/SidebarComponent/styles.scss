@@ -1,0 +1,9 @@
+#sidebar {
+    background-color: #2e7d32;
+    color: white !important;
+    .sidebar-link {
+        &:hover {
+            color: #60ad5e;
+        }
+    }
+}

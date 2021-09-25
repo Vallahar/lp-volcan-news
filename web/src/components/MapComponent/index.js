@@ -5,7 +5,6 @@ class MapComponent extends React.Component {
     defaultProps = {};
 
     render() {
-        const {} = this.props;
         return (
             <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4" id="map-component">
                 <div className="flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-blueGray-800" id="map-container">

@@ -1,18 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import NotificationDropdown from "./NotificationDropdown.js";
-import UserDropdown from "./MenuDropdown.js";
+import NotificationDropdown from "../NotificationDropdown.js";
+import UserDropdown from "../MenuDropdown.js";
+
+import './styles.scss';
 
 export default function Sidebar() {
   const [collapseShow, setCollapseShow] = React.useState("hidden");
   return (
     <>
-      <nav className="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6">
+      <nav
+        className="md:left-0 md:block md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6"
+        id="sidebar"
+      >
         <div className="md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full mx-auto">
           {/* Toggler */}
           <button
-            className="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
+            className="cursor-pointer opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
             type="button"
             onClick={() => setCollapseShow("bg-white m-2 py-3 px-6")}
           >
@@ -20,7 +25,7 @@ export default function Sidebar() {
           </button>
           {/* Brand */}
           <Link
-            className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
+            className="md:block text-left md:pb-2 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
             to="/"
           >
             Recursos
@@ -46,7 +51,7 @@ export default function Sidebar() {
               <div className="flex flex-wrap">
                 <div className="w-6/12">
                   <Link
-                    className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
+                    className="md:block text-left md:pb-2  mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
                     to="/"
                   >
                     Tailwind Starter Kit
@@ -69,7 +74,7 @@ export default function Sidebar() {
                 <input
                   type="text"
                   placeholder="Search"
-                  className="border-0 px-3 py-2 h-12 border border-solid  border-blueGray-500 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"
+                  className="border-0 px-3 py-2 h-12 border border-solid  border-blueGray-500 placeholder-blueGray-300  bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"
                 />
               </div>
             </form>
@@ -77,7 +82,7 @@ export default function Sidebar() {
             <ul className="md:flex-col md:min-w-full flex flex-col list-none">
               <li className="items-center">
                 <Link
-                  className="text-pink-500 hover:text-pink-600 text-xs uppercase py-3 font-bold block"
+                  className="sidebar-link text-xs uppercase py-3 font-bold block"
                   to="/dashboard"
                 >
                   <i className="fas fa-map-marked opacity-75 mr-2 text-sm"></i> Mapa de Evolución
@@ -86,39 +91,39 @@ export default function Sidebar() {
 
               <li className="items-center">
                 <Link
-                  className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                  className="sidebar-link text-xs uppercase py-3 font-bold block"
                   to="/"
                 >
-                  <i className="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i> Medios Oficiales
+                  <i className="fas fa-newspaper mr-2 text-sm"></i> Medios Oficiales
                 </Link>
               </li>
 
               <li className="items-center">
                 <Link
-                  className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                  className="sidebar-link text-xs uppercase py-3 font-bold block"
                   to="/"
                 >
-                  <i className="fas fa-address-book text-blueGray-400 mr-2 text-sm"></i> Servicios
+                  <i className="fas fa-address-book  mr-2 text-sm"></i> Servicios
                 </Link>
               </li>
 
               <li className="items-center">
                 <Link
-                  className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                  className="sidebar-link text-xs uppercase py-3 font-bold block"
                   to="/"
                 >
-                  <i className="fas fa-hand-holding-usd text-blueGray-400 mr-2 text-sm"></i> Donaciones
+                  <i className="fas fa-hand-holding-usd  mr-2 text-sm"></i> Donaciones
                 </Link>
               </li>
 
+
               <li className="items-center">
-                <a
-                  className="text-blueGray-300 text-xs uppercase py-3 font-bold block"
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
+                <Link
+                  className="sidebar-link text-xs uppercase py-3 font-bold block"
+                  to="/"
                 >
-                  <i className="fas fa-image text-blueGray-300 mr-2 text-sm"></i> Aportes
-                </a>
+                  <i className="fas fa-image mr-2 text-sm"></i> Aportes
+                </Link>
               </li>
 
               {/* <li className="items-center">
@@ -134,62 +139,62 @@ export default function Sidebar() {
             {/* Divider */}
             <hr className="my-4 md:min-w-full" />
             {/* Heading */}
-            <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
+            <h6 className="md:min-w-full text-xs uppercase font-bold block pt-1 pb-4 no-underline">
               Enlaces
             </h6>
             {/* Navigation */}
             <ul className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
               <li className="inline-flex">
                 <Link
-                  className="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
+                  className="sidebar-link text-sm block mb-4 no-underline font-semibold"
                   to="/"
                 >
-                  <i className="fas fa-paint-brush mr-2 text-blueGray-400 text-base"></i> Styles
+                  <i className="fas fa-paint-brush mr-2  text-base"></i> Styles
                 </Link>
               </li>
 
               <li className="inline-flex">
                 <Link
-                  className="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
+                  className="sidebar-link text-sm block mb-4 no-underline font-semibold"
                   to="/"
                 >
-                  <i className="fab fa-css3-alt mr-2 text-blueGray-400 text-base"></i> CSS Components
+                  <i className="fab fa-css3-alt mr-2  text-base"></i> CSS Components
                 </Link>
               </li>
 
               <li className="inline-flex">
                 <Link
-                  className="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
+                  className="sidebar-link text-sm block mb-4 no-underline font-semibold"
                   to="/"
                 >
-                  <i className="fab fa-vuejs mr-2 text-blueGray-400 text-base"></i> VueJS
+                  <i className="fab fa-vuejs mr-2  text-base"></i> VueJS
                 </Link>
               </li>
 
               <li className="inline-flex">
                 <Link
-                  className="text-blueGray-700 hover:text-blueGray-500  text-sm block mb-4 no-underline font-semibold"
+                  className="sidebar-link  text-sm block mb-4 no-underline font-semibold"
                   to="/"
                 >
-                  <i className="fab fa-react mr-2 text-blueGray-400 text-base"></i> React
+                  <i className="fab fa-react mr-2  text-base"></i> React
                 </Link>
               </li>
 
               <li className="inline-flex">
                 <Link
-                  className="text-blueGray-700 hover:text-blueGray-500  text-sm block mb-4 no-underline font-semibold"
+                  className="sidebar-link  text-sm block mb-4 no-underline font-semibold"
                   to="/"
                 >
-                  <i className="fab fa-angular mr-2 text-blueGray-400 text-base"></i> Angular
+                  <i className="fab fa-angular mr-2  text-base"></i> Angular
                 </Link>
               </li>
 
               <li className="inline-flex">
                 <Link
-                  className="text-blueGray-700 hover:text-blueGray-500  text-sm block mb-4 no-underline font-semibold"
+                  className="sidebar-link  text-sm block mb-4 no-underline font-semibold"
                   to="/"
                 >
-                  <i className="fab fa-js-square mr-2 text-blueGray-400 text-base"></i> Javascript
+                  <i className="fab fa-js-square mr-2  text-base"></i> Javascript
                 </Link>
               </li>
             </ul>
