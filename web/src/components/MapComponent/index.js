@@ -33,7 +33,7 @@ class MapComponent extends React.Component {
                         />
                     </div>
                     <div className="mb-0 px-4 pb-2">
-                        <a href="https://www.openstreetmap.org/#map=15/28.6129/-17.8945">
+                        <a className="text-white" href="https://www.openstreetmap.org/#map=15/28.6129/-17.8945" target="_blank">
                             Ver el mapa en grande
                         </a>
                     </div>
