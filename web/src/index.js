@@ -4,12 +4,48 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-import Dashboard from "views/Dashboard.js";
+import { DashboardPage } from "./views/DashboardPage/DashboardPage.js";
+import { MainLayout } from "./templates/MainLayout/MainLayout";
+
+
+const routes = [
+  {
+    page: 'dashboard',
+    component: DashboardPage,
+    path: '/dashboard',
+    layout: MainLayout,
+  },
+];
+
+function getRoutes() {
+  return routes.map((route) =>
+    <RouteWrapper
+      path={route.path}
+      component={route.component}
+      layout={route.layout}
+      page={route.page}
+    />
+  )
+}
+
+function RouteWrapper({
+  component: Component,
+  layout: Layout,
+  ...rest
+}) {
+  return (
+    <Route {...rest} render={(props) =>
+      <Layout {...props}>
+        <Component {...props} />
+      </Layout>
+    } />
+  );
+}
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/dashboard" component={Dashboard} />
+      {getRoutes()}
       <Redirect from="/" to="/dashboard" />
     </Switch>
   </BrowserRouter>,
