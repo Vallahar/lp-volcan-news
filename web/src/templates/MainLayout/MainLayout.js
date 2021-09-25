@@ -1,8 +1,6 @@
 import React from 'react';
 
 import Sidebar from "../../components/SidebarComponent/Sidebar.js";
-import Navbar from "../../components/NavbarComponent/Navbar.js";
-
 
 import './style.scss';
 
@@ -13,7 +11,6 @@ export const MainLayout = ({ children }) => {
       sectionSelected={section}
     />
     <div className="main-content">
-      <Navbar />
       {children}
     </div>
   </div>)
