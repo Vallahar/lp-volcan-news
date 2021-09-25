@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import NotificationDropdown from "./NotificationDropdown.js";
-import UserDropdown from "./UserDropdown.js";
+import UserDropdown from "./MenuDropdown.js";
 
 export default function Sidebar() {
   const [collapseShow, setCollapseShow] = React.useState("hidden");
@@ -23,7 +23,7 @@ export default function Sidebar() {
             className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
             to="/"
           >
-            Tailwind Starter Kit
+            Recursos
           </Link>
           {/* User */}
           <ul className="md:hidden items-center flex flex-wrap list-none">
@@ -80,7 +80,7 @@ export default function Sidebar() {
                   className="text-pink-500 hover:text-pink-600 text-xs uppercase py-3 font-bold block"
                   to="/dashboard"
                 >
-                  <i className="fas fa-tv opacity-75 mr-2 text-sm"></i> Dashboard
+                  <i className="fas fa-map-marked opacity-75 mr-2 text-sm"></i> Mapa de Evolución
                 </Link>
               </li>
 
@@ -89,7 +89,7 @@ export default function Sidebar() {
                   className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                   to="/"
                 >
-                  <i className="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i> Landing Page
+                  <i className="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i> Medios Oficiales
                 </Link>
               </li>
 
@@ -98,7 +98,7 @@ export default function Sidebar() {
                   className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                   to="/"
                 >
-                  <i className="fas fa-user-circle text-blueGray-400 mr-2 text-sm"></i> Profile Page
+                  <i className="fas fa-address-book text-blueGray-400 mr-2 text-sm"></i> Servicios
                 </Link>
               </li>
 
@@ -107,7 +107,7 @@ export default function Sidebar() {
                   className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                   to="/"
                 >
-                  <i className="fas fa-fingerprint text-blueGray-400 mr-2 text-sm"></i> Login
+                  <i className="fas fa-hand-holding-usd text-blueGray-400 mr-2 text-sm"></i> Donaciones
                 </Link>
               </li>
 
@@ -117,25 +117,25 @@ export default function Sidebar() {
                   href="#pablo"
                   onClick={e => e.preventDefault()}
                 >
-                  <i className="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"></i> Register (soon)
+                  <i className="fas fa-image text-blueGray-300 mr-2 text-sm"></i> Aportes
                 </a>
               </li>
 
-              <li className="items-center">
+              {/* <li className="items-center">
                 <a
                   className="text-blueGray-300 text-xs uppercase py-3 font-bold block"
                   href="#pablo"
                   onClick={e => e.preventDefault()}
                 >
-                  <i className="fas fa-tools text-blueGray-300 mr-2 text-sm"></i> Settings (soon)
+                  <i className="fas fa-tools text-blueGray-300 mr-2 text-sm"></i> Enlaces
                 </a>
-              </li>
+              </li> */}
             </ul>
             {/* Divider */}
             <hr className="my-4 md:min-w-full" />
             {/* Heading */}
             <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
-              Documentation
+              Enlaces
             </h6>
             {/* Navigation */}
             <ul className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
