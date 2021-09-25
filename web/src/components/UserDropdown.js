@@ -27,13 +27,16 @@ const UserDropdown = () => {
         }}
       >
         <div className="items-center flex">
-          <span className="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full">
-            <img
-              alt="..."
-              className="w-full rounded-full align-middle border-none shadow-lg"
-              src={require("assets/img/team-1-800x800.jpg").default}
-            />
-          </span>
+          {/* <span className="w-12 h-12 text-sm text-white inline-flex items-center justify-center rounded-full">
+          <i className="far fa-bars w-12 h-12" />
+          </span> */}
+          <button
+            class="navBar-button bg-blueGray-200 cursor-pointer text-black margin-top-25px px-3 py-1 text-xl leading-none rounded border border-solid border-transparent"
+            type="button"
+            onclick="toggleLeftPanel()"
+          >
+            <i class="fas fa-bars"></i></button
+          >
         </div>
       </a>
       <div
