@@ -4,4 +4,10 @@
     .main-content {
         height: 100%;
     }
+
+    .link {
+        &:hover {
+            color: #60ad5e;
+        }
+    }
 }
