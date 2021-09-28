@@ -6,9 +6,7 @@ import './style.scss';
 
 export const MainLayout = ({ children }) => {
   return (<div className="main-container w-full">
-    <Sidebar
-      sectionSelected={section}
-    />
+    <Sidebar/>
     <div className="main-layout-content">
       {children}
     </div>
