@@ -4,7 +4,9 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-import { DashboardPage } from "./views/DashboardPage/DashboardPage.js";
+import { DashboardPage } from "./views/DashboardPage/DashboardPage";
+import { ArticlesListPage } from "./views/ArticlesListPage/ArticlesListPage";
+import { ArticlePage } from "./views/ArticlePage/ArticlePage";
 import { MainLayout } from "./templates/MainLayout/MainLayout";
 
 
@@ -13,6 +15,18 @@ const routes = [
     page: 'dashboard',
     component: DashboardPage,
     path: '/dashboard',
+    layout: MainLayout,
+  },
+  {
+    page: 'articles',
+    component: ArticlesListPage,
+    path: '/articulos',
+    layout: MainLayout,
+  },
+  {
+    page: 'article',
+    component: ArticlePage,
+    path: '/articulo/:id',
     layout: MainLayout,
   },
 ];
