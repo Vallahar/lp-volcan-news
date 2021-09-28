@@ -8,3 +8,11 @@
         }
     }
 }
+
+@media (max-width: 767px){
+    #sidebar {
+        min-width: none;
+        position: fixed;
+        width: 100%;
+    }
+  }

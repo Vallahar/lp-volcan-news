@@ -13,3 +13,9 @@ html, body, #root, #fullheight {
         width: 100%;
     }
 }
+
+@media (max-width: 767px){
+    .main-layout-content {
+       margin-top: 80px;
+    }
+  }
