@@ -1,24 +1,26 @@
+name: Deploy to Netlify
 on:
   push:
     branches:
       - master
 
-name: Publish to Netlify
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./web
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v1
+jobs:
+  publish_to_netlify:
+      runs-on: ubuntu-latest
+      defaults:
+        run:
+          working-directory: ./web
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v1
 
-      - name: Build React App
-        run: npm run build
+        - name: Build React App
+          run: npm run build
 
-      - name: Deploy production to Netlify
-        uses: South-Paw/action-netlify-deploy@v1.2.0
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
-          build-dir: './web/build'
+        - name: Deploy production to Netlify
+          uses: South-Paw/action-netlify-deploy@v1.2.0
+          with:
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+            netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+            netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
+            build-dir: './web/build'
