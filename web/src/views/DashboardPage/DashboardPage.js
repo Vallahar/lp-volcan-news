@@ -9,7 +9,7 @@ class DashboardPage extends Component {
 
   constructor(props) {
     super(props)
-    this.myRef = React.createRef()
+    this.myRef = React.createRef();
   };
 
 

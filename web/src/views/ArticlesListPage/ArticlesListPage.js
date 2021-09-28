@@ -1,23 +1,43 @@
 import React, { Component } from "react";
 import { ArticleCardComponent } from "../../components/ArticleCardComponent/ArticleCardComponent";
-import { articles } from '../../assets/articlesMock.json';
 
 import './styles.scss';
 
 class ArticlesListPage extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      posts: [],
+    };
+  }
+
+  componentDidMount() {
+    this.props.api.posts
+      .browse({ limit: 5, include: 'tags,authors' })
+      .then((posts) => {
+        this.setState({posts: posts});
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }
+
   getArticles() {
     const articlesContent = [];
-    articles.forEach((article) => {
+    const { posts } = this.state;
+
+    posts.forEach((post) => {
       articlesContent.push(
         <ArticleCardComponent
-          title={article.title}
-          slug={article.slug}
-          image={article.image}
-          description={article.description}
+          title={post.title}
+          slug={post.slug}
+          image={post.feature_image}
+          description={post.excerpt}
         />
-      )
-    })
+      );
+    });
+
     return articlesContent;
   }
 
@@ -28,16 +48,10 @@ class ArticlesListPage extends Component {
         <div className="bg-blueGray-100" id="articles-list-page">
           <div className="articles-container">
             {this.getArticles()}
-            {/* <ArticleCardComponent/>
-            <ArticleCardComponent/>
-            <ArticleCardComponent/>
-            <ArticleCardComponent/>
-            <ArticleCardComponent/>
-            <ArticleCardComponent/> */}
           </div>
         </div>
       </>
-    );   
+    );
   }
 }
 

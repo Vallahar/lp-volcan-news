@@ -9,6 +9,11 @@ import { ArticlesListPage } from "./views/ArticlesListPage/ArticlesListPage";
 import { ArticlePage } from "./views/ArticlePage/ArticlePage";
 import { MainLayout } from "./templates/MainLayout/MainLayout";
 
+import { apiConfig } from "../package.json";
+
+import GhostContentAPI from '@tryghost/content-api'
+
+const api = new GhostContentAPI(apiConfig);
 
 const routes = [
   {
@@ -52,7 +57,7 @@ function RouteWrapper({
   return (
     <Route {...rest} render={(props) =>
       <Layout {...props}>
-        <Component {...props} />
+        <Component {...props} api={api} />
       </Layout>
     } />
   );
