@@ -10,9 +10,22 @@ jobs:
       defaults:
         run:
           working-directory: ./web
+
+      strategy:
+        matrix:
+          node-version: [10.x, 12.x, 14.x]
+
       steps:
         - name: Checkout repository
           uses: actions/checkout@v1
+
+        - name: Use Node.js ${{ matrix.node-version }}
+          uses: actions/setup-node@v1
+          with:
+            node-version: ${{ matrix.node-version }}
+
+        - name: Install dependencies
+          run: npm install
 
         - name: Build React App
           run: npm run build
