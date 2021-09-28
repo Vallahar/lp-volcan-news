@@ -1,13 +1,15 @@
+html, body, #root, #fullheight {
+    min-height: 100% !important;
+    height: 100%;
+}
+
 .main-container{
     display: flex;
     flex-direction: row;
-    .main-content {
-        height: 100%;
-    }
-
-    .link {
-        &:hover {
-            color: #60ad5e;
-        }
+    width: 100%;
+    min-height: 100% !important;
+    .main-layout-content {
+        min-height: 100% !important;
+        width: 100%;
     }
 }

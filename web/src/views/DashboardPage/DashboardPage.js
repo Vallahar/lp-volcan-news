@@ -58,7 +58,7 @@ class DashboardPage extends Component {
       <>
         <div className="bg-blueGray-100" id="dashboard-page">
           {/* Header */}
-          <div className="first-row relative md:pt-32 pb-32 pt-12">
+          <div className="first-row relative pb-32 pt-12">
             {this.firstRow()}
           </div>
           <div className="px-4 md:px-10 mx-auto w-full -m-24">
@@ -66,7 +66,9 @@ class DashboardPage extends Component {
               {<MapComponent />}
             </div>
             <div className="flex flex-wrap mt-4">
-              <div className="row w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
+              <div className="row flex flex-wrap justify-center w-full xl:w-8/12 mb-12 xl:mb-0 px-4 py-4">
+              <h2 class="text-white text-xl font-semibold">Ayuntamientos</h2>
+              <div className="section-content flex flex-wrap mt-">
                 <InfoCardComponent
                   logoURL="https://upload.wikimedia.org/wikipedia/commons/1/19/Los-llanos-de-aridane_escudo.png"
                   title="Ayuntamiento Los Llanos de Aridane"
@@ -145,6 +147,7 @@ class DashboardPage extends Component {
                     Text testing tester
                   </IconElementComponent>
                 </InfoCardComponent>
+              </div>
               </div>
               <div className="row w-full xl:w-4/12 px-4">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
@@ -295,7 +298,7 @@ class DashboardPage extends Component {
                 </div>
               </div>
             </div>
-            <footer className="block py-4">
+            {/* <footer className="block py-4">
               <div className="container mx-auto px-4">
                 <hr className="mb-4 border-b-1 border-blueGray-200" />
                 <div className="flex flex-wrap items-center md:justify-between justify-center">
@@ -348,7 +351,7 @@ class DashboardPage extends Component {
                   </div>
                 </div>
               </div>
-            </footer>
+            </footer> */}
           </div>
         </div>
       </>

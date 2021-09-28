@@ -6,11 +6,11 @@ import './style.scss';
 
 export const MainLayout = ({ children }) => {
   const [section, setSection] = React.useState("dashboard");
-  return (<div className="main-container">
+  return (<div className="main-container w-full">
     <Sidebar
       sectionSelected={section}
     />
-    <div className="main-content">
+    <div className="main-layout-content">
       {children}
     </div>
   </div>)
