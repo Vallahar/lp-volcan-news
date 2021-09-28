@@ -1,0 +1,27 @@
+#article-page{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .article-container {
+        padding: 5%;
+        width: 90%;
+        .article {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+            .article-image {
+                height: 90%;
+                width: 100%;
+                object-fit: contain;
+                display: flex;
+                justify-content: center;
+        }
+    }
+    .not-found {
+        width: 100%;
+        height: 100%;
+        font-size: 100px;
+    }
+}
