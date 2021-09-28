@@ -5,12 +5,11 @@ import Sidebar from "../../components/SidebarComponent/Sidebar.js";
 import './style.scss';
 
 export const MainLayout = ({ children }) => {
-  const [section] = React.useState("dashboard");
-  return (<div className="main-container">
+  return (<div className="main-container w-full">
     <Sidebar
       sectionSelected={section}
     />
-    <div className="main-content">
+    <div className="main-layout-content">
       {children}
     </div>
   </div>)

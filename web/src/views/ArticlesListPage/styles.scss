@@ -1,0 +1,31 @@
+#articles-list-page {
+    .articles-container {
+        padding: 5%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .article-card-component {
+            justify-content: space-between;
+            align-items: center;
+
+            max-width: 33.33%;
+            min-width: 400px;
+            margin-bottom: 32px;
+        }
+        @media (min-width: 1024px) and (max-width: 1600px) {
+            .article-card-component {
+                max-width: 33.33%;
+                min-width: unset;
+            }
+        
+          }
+          @media (max-width: 1024px){
+            .article-card-component {
+                max-width: none;
+                min-width: unset;
+            }
+        
+          }
+    }
+
+}

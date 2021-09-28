@@ -92,9 +92,9 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link
                   className="sidebar-link text-xs uppercase py-3 font-bold block"
-                  to="/"
+                  to="/articulos"
                 >
-                  <i className="fas fa-newspaper mr-2 text-sm"></i> Medios Oficiales
+                  <i className="fas fa-newspaper mr-2 text-sm"></i> Artículos útiles
                 </Link>
               </li>
 
