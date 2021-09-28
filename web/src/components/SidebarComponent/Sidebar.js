@@ -53,7 +53,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link
                   className="sidebar-link text-xs uppercase py-3 font-bold block"
-                  to="/dashboard"
+                  to="/"
                 >
                   <i className="fas fa-map-marked opacity-75 mr-2 text-sm"></i> Mapa de Evolución
                 </Link>

@@ -14,8 +14,9 @@ const routes = [
   {
     page: 'dashboard',
     component: DashboardPage,
-    path: '/dashboard',
+    path: '/',
     layout: MainLayout,
+    exact: true
   },
   {
     page: 'articles',
@@ -38,6 +39,7 @@ function getRoutes() {
       component={route.component}
       layout={route.layout}
       page={route.page}
+      exact={route.exact}
     />
   )
 }
@@ -60,7 +62,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       {getRoutes()}
-      <Redirect from="/" to="/dashboard" />
+      <Redirect from="/" to="/" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
