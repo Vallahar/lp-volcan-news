@@ -1,0 +1,27 @@
+#tabs-component {
+    color: white;
+    .tabs-container {
+        display: flex;
+        flex-direction: row;
+        .tab {
+            &:hover {
+                color: #fff5d6;
+            }
+            &.activated {
+                border-bottom-style: solid;
+                border-bottom-color: #fff5d6;
+                border-bottom-width: 2px;
+                color: #fff5d6;
+                font-weight: 500;
+            }
+        }
+
+    }
+
+}
+
+@media (max-width: 640px) {
+    .tabs-container {
+        flex-direction: column !important;
+    }
+}
