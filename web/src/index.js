@@ -21,19 +21,21 @@ const routes = [
     component: DashboardPage,
     path: '/',
     layout: MainLayout,
-    exact: true
+    exact: true,
   },
   {
     page: 'articles',
     component: ArticlesListPage,
     path: '/articulos',
     layout: MainLayout,
+    exact: true,
   },
   {
     page: 'article',
     component: ArticlePage,
     path: '/articulo/:id',
     layout: MainLayout,
+    exact: true,
   },
 ];
 
