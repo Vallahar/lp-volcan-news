@@ -19,7 +19,7 @@ class DashboardPage extends Component {
       <div>
         {/* Card stats */}
         <div
-          className="ml-4 mb-4 text-black"
+          className="ml-4 mb-4 text-white"
         >Artículos útiles</div>
         <div className="flex flex-wrap">
           <CardComponent
@@ -165,12 +165,12 @@ class DashboardPage extends Component {
   render() {
     return (
       <>
-        <div className="bg-blueGray-100" id="dashboard-page">
+        <div id="dashboard-page">
           {/* Header */}
           <div className="first-row relative pb-32 pt-12">
             {this.firstRow()}
           </div>
-          <div className="px-4 md:px-10 mx-auto w-full -m-24">
+          <div className="second-row px-4 md:px-10 mx-auto w-full -m-24">
             <div className="flex flex-wrap" >
               {<MapComponent />}
             </div>
