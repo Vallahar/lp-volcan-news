@@ -12,6 +12,10 @@ const mapTabs = [
         name: 'IGN',
     },
     {
+        id: 4,
+        name: 'Google Maps',
+    },
+    {
         id: 3,
         name: 'Open Street Maps',
     },
@@ -35,7 +39,7 @@ class MapComponent extends React.Component {
                             <h6 className="uppercase text-blueGray-100 mb-1 text-xs font-semibold">
                                 MAPA NO OFICIAL - COMUNIDAD DE OPENSTREETMAPS
                             </h6>
-                            <h2 className="text-white text-xl font-semibold">
+                            <h2 className=" text-xl font-semibold">
                                 Mapa de evolución
                             </h2>
                         </div>
@@ -54,7 +58,43 @@ class MapComponent extends React.Component {
                     />
                 </div>
                 <div className="mb-0 px-4 pb-2">
-                    <a className="text-white" href="https://www.openstreetmap.org/#map=15/28.6129/-17.8945" target="_blank" rel="noreferrer">
+                    <a className="" href="https://www.openstreetmap.org/#map=15/28.6129/-17.8945" target="_blank" rel="noreferrer">
+                        Ver el mapa en grande
+                    </a>
+                </div>
+            </>
+
+        )
+    }
+    getGoogleMap() {
+        return (
+            <>
+                <div className="rounded-t mb-0 px-4 py-3 bg-transparent" id="map-title">
+                    <div className="flex flex-wrap items-center">
+                        <div className="relative w-full max-w-full flex-grow flex-1">
+                            <h6 className="uppercase text-blueGray-100 mb-1 text-xs font-semibold">
+                                MAPA NO OFICIAL
+                            </h6>
+                            <h2 className=" text-xl font-semibold">
+                                Mapa de evolución y perimetros restringidos
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div className="p-4 flex-auto h-full" id="map-content">
+                    <iframe
+                        title="map-openstreetmap"
+                        width="100%"
+                        height="650"
+                        frameborder="0"
+                        scrolling="no"
+                        marginheight="0"
+                        marginwidth="0"
+                        src="https://www.google.com/maps/d/embed?mid=1u7vUeK3m__w4YRHPL-E08SVBkwMBcNcR"
+                    />
+                </div>
+                <div className="mb-0 px-4 pb-2">
+                    <a className="" href="https://www.openstreetmap.org/#map=15/28.6129/-17.8945" target="_blank" rel="noreferrer">
                         Ver el mapa en grande
                     </a>
                 </div>
@@ -72,7 +112,7 @@ class MapComponent extends React.Component {
                             <h6 className="uppercase text-blueGray-100 mb-1 text-xs font-semibold">
                                 MAPA INSTITUTO GEOGRAFICO NACIONAL
                             </h6>
-                            <h2 className="text-white text-xl font-semibold">
+                            <h2 className=" text-xl font-semibold">
                                 Mapa de evolución
                             </h2>
                         </div>
@@ -90,7 +130,7 @@ class MapComponent extends React.Component {
                     />
                 </div>
                 <div className="mb-0 px-4 pb-2">
-                    <a className="text-white" href="https://arcg.is/0HHOma" target="_blank" rel="noreferrer">
+                    <a className="" href="https://arcg.is/0HHOma" target="_blank" rel="noreferrer">
                         Ver el mapa en grande
                     </a>
                 </div>
@@ -105,12 +145,12 @@ class MapComponent extends React.Component {
                 <div className="rounded-t mb-0 px-4 py-3 bg-transparent" id="map-title">
                     <div className="flex flex-wrap items-center">
                         <div className="relative w-full max-w-full flex-grow flex-1">
-                            <h6 className="uppercase text-blueGray-100 mb-1 text-xs font-semibold">
+                            <h6 className="uppercase mb-1 text-xs font-semibold">
                                 MAPA CABILDO DE LA PALMA
                             </h6>
-                            <h2 className="text-white text-xl font-semibold">
-                                Mapa de evolución
-                            </h2>
+                            <h8 className="text-xl font-semibold">
+                                Si aparece una ventana para iniciar sesión dele a cancelar
+                            </h8>
                         </div>
                     </div>
                 </div>
@@ -126,7 +166,7 @@ class MapComponent extends React.Component {
                     />
                 </div>
                 <div className="mb-0 px-4 pb-2">
-                    <a className="text-white" href="https://arcg.is/1mKPfL" target="_blank" rel="noreferrer">
+                    <a href="https://arcg.is/1mKPfL" target="_blank" rel="noreferrer">
                         Ver el mapa en grande
                     </a>
                 </div>
@@ -137,6 +177,8 @@ class MapComponent extends React.Component {
 
     getMaps() {
         switch (this.state.tabId) {
+            case 4:
+                return this.getGoogleMap();        
             case 3:
                 return this.getOpenStreetMap();        
             case 2:

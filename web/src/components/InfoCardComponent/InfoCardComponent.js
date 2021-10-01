@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+import './styles.scss';
+
 class InfoCardComponent extends React.Component {
     defaultProps = {};
 
@@ -15,7 +17,7 @@ class InfoCardComponent extends React.Component {
             children,
         } = this.props;
         return (
-            <div className="info-card-component xl:w-4/12 px-3">
+            <div className="info-card-component xl:w-6/12 px-3">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-4">
                     <div className="px-6 py-6">
                         <div className="info-card-logo flex flex-wrap justify-center mt-4">

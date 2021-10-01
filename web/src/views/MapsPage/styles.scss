@@ -1,0 +1,11 @@
+#masp-page {
+    width: 100%;
+    height: 100%;
+    .maps-container {
+        margin: 32px;
+        height: calc(100% - 64px);
+        iframe {
+            height: 100%;
+        }
+    }
+}

@@ -1,4 +1,4 @@
 import { InfoCardComponent } from "./InfoCardComponent";
-import { IconElementComponent } from "./IconElementComponent";
+import { IconElementComponent } from "./subComponent/IconElementComponent";
 
 export { InfoCardComponent, IconElementComponent };
