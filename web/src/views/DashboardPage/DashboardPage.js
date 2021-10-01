@@ -47,11 +47,14 @@ class DashboardPage extends Component {
     </div>)
   }
 
-  seconsRow() {
+  secondRow() {
     return (
       <div className="row flex flex-wrap justify-center w-full">
-        <h2 class="text-white text-xl font-semibold">Ayuntamientos</h2>
-        <div className="section-content flex flex-wrap mt-">
+        <div className="title flex w-full justify-center">
+          <h2 class="text-xl font-semibold">Entidades públicas</h2>
+          <div className="separator w-6/12" />
+        </div>
+        <div className="section-content justify-center flex flex-wrap mt-">
           <InfoCardComponent
             logoURL="https://upload.wikimedia.org/wikipedia/commons/1/19/Los-llanos-de-aridane_escudo.png"
             title="Ayuntamiento Los Llanos de Aridane"
@@ -165,7 +168,7 @@ class DashboardPage extends Component {
   render() {
     return (
       <>
-        <div id="dashboard-page">
+        <div id="dashboard-page" className="bg-blueGray-100">
           {/* Header */}
           <div className="first-row relative pb-32 pt-12">
             {this.firstRow()}
@@ -174,9 +177,9 @@ class DashboardPage extends Component {
             <div className="flex flex-wrap" >
               {<MapComponent />}
             </div>
-            <div className="flex flex-wrap py-6">
+            <div className="flex flex-wrap py-6 relative">
               <div className="left-container flex flex-wrap justify-center w-full xl:w-8/12 mb-12 xl:mb-0 px-4 py-4">
-                {this.seconsRow()}
+                {this.secondRow()}
               </div>
               <div className="right-container w-full xl:w-4/12 px-4">
                 {this.rightSocialElement()}

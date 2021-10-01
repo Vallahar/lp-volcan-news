@@ -1,6 +1,7 @@
 #dashboard-page {
     .first-row, .second-row{
-        background-color: #008036; // #7d9e41; // #EFF3F8;
+        // background-color: #008036; // #7d9e41; // #EFF3F8;
+        
     }
     .title {
         justify-self: center;
@@ -8,5 +9,20 @@
     .row {
         display: flex;
         flex-wrap: wrap;
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 16px;
+            .separator {
+                width: 80%;
+                margin-top: 16px;
+            }
+        }
+    }
+    .left-container {
+        height: fit-content;
+        justify-content: center;
     }
 }

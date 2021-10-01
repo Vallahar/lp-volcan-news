@@ -12,7 +12,7 @@ const TabsComponent = ({
       return tabs.map((tab) => {
         return (
           <button
-            className={`tab py-4 px-6 block focus:outline-none ${tab.id === tabActivated ? 'activated' : ''}`}
+            className={`tab py-4 px-6 block focus:outline-none ${tab.id === tabActivated ? 'activated color-secondary' : ''}`}
             onClick={() => handleTabChange(tab.id)}
           >
             {tab.name}

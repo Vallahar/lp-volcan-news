@@ -8,9 +8,35 @@ html, body, #root, #fullheight {
     flex-direction: row;
     width: 100%;
     min-height: 100% !important;
+
+    .color-primary {
+        color: #FFF5D6;
+    }
+
+    .bg-color-primary {
+        background-color: #FFF5D6;
+    }
+
+    .color-secondary {
+        color: #008036;
+    }
+
+    .bg-color-secondary {
+        background-color: #008036;
+    }
+
     .main-layout-content {
         min-height: 100% !important;
         width: 100%;
+    }
+
+    .separator {
+        display: inline-block;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: black;
+        margin-top: 6px;
+        margin-bottom: 6px;
     }
 }
 

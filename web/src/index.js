@@ -7,6 +7,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import { DashboardPage } from "./views/DashboardPage/DashboardPage";
 import { ArticlesListPage } from "./views/ArticlesListPage/ArticlesListPage";
 import { ArticlePage } from "./views/ArticlePage/ArticlePage";
+import { MapsPage } from "./views/MapsPage/MapsPage";
 import { MainLayout } from "./templates/MainLayout/MainLayout";
 
 import { apiConfig } from "../package.json";
@@ -34,6 +35,13 @@ const routes = [
     page: 'article',
     component: ArticlePage,
     path: '/articulo/:id',
+    layout: MainLayout,
+    exact: true,
+  },
+  {
+    page: 'maps',
+    component: MapsPage,
+    path: '/mapas',
     layout: MainLayout,
     exact: true,
   },

@@ -1,17 +1,15 @@
 #tabs-component {
-    color: white;
     .tabs-container {
         display: flex;
         flex-direction: row;
         .tab {
             &:hover {
-                color: #fff5d6;
+                color: #008036;
             }
             &.activated {
                 border-bottom-style: solid;
-                border-bottom-color: #fff5d6;
+                border-bottom-color: #008036;
                 border-bottom-width: 2px;
-                color: #fff5d6;
                 font-weight: 500;
             }
         }

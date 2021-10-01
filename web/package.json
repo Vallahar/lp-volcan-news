@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "apiConfig": {
-    "url": "http://68.183.212.51",
-    "key": "cb517803002094ffda428220cd",
+    "url": "https://diegofrancisco.es",
+    "key": "3669fe774bead377becbfcae13",
     "version": "v3"
   },
   "dependencies": {
@@ -20,6 +20,7 @@
     "react-router": "5.2.0",
     "react-router-dom": "5.2.0",
     "react-scripts": "^4.0.3",
+    "react-twitter-embed": "^3.0.3",
     "sass": "^1.42.1",
     "web-vitals": "^1.1.2"
   },
